@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISSUE SUBMISSION </title>
+    <style>
+        
+        body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+   
+   background-image: url('https://i.pinimg.com/736x/34/57/d9/3457d93fa8b0e117b1c5faf9c6599315.jpg');
+       background-repeat: none;
+       background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color:antiquewhite;
+    position:relative;
+    animation: fadeIn 2s ease-out forwards;          /*animation*/
+}
+ @keyframes fadeIn {
+      from { opacity: 0; }  /* invisible */
+      to   { opacity: 1; }  /* visible */
+    }
+
+
+.box {
+    
+  backdrop-filter: blur(25px);                               /* glassy blur effect */
+     border: 1px solid #1a1a1a;
+     padding:20px;
+    border-radius: 10px;
+    box-shadow: 10px 4px 10px rgba(236, 196, 196, 0.267);
+    text-align: center;
+    width: 300px;
+}
+input,  button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 35px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#any
+{
+    font-size: 20px;
+}
+
+
+
+#form
+{
+    text-transform: uppercase;
+    margin:50px;
+    font-size: 40px;
+}
+
+#submit {
+    background-color: #2404f7;
+    color: rgb(203, 237, 222);
+    border:  1px solid #faf9f9; 
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #af0606;
+}
+
+
+    </style>
+</head>
+<body>
+    <center>
+    <h1  id="form" ><strong>ISSUE SUBMISSION FORM</strong> </h1>
+    <form action="issue.php" method="POST" class="box" >
+        <h1  id="any" ><strong>ANY ISSUE ?! </strong> </h1>
+
+       
+        <input type="text" name="name" placeholder="ENTER YOUR COMPANY'S NAME" required> 
+         
+        <input type="email" name="email" placeholder="EMAIL"  required> 
+       
+       <input type="tel" pattern="[0-9]{10}"  name="number" maxlength="10" placeholder="Enter 10-digit phone number" required>
+     
+        <input type="text" name="issue" placeholder="PROBLEM"  required>
+            
+         <input type = "submit" id="submit">
+    </form>
+       </center>
+   
+ 
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    /* General Reset */
+
+     @font-face {
+        font-family: 'Gilmer';
+        src: url('fonts/Gilmer-Bold.woff2') format('woff2'),
+             url('fonts/Gilmer-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+   @font-face {
+        font-family: 'Gilmer'; 
+        src: url('fonts/Gilmer-Regular.woff2') format('woff2'),
+             url('fonts/Gilmer-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+* {
+  
+  font-family: 'Gilmer', sans-serif;
+      
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     
+    }
+    body{
+      background-image: url('https://i.pinimg.com/736x/34/57/d9/3457d93fa8b0e117b1c5faf9c6599315.jpg');
+    background-size: cover;
+    background-repeat: none;
+    }
+     
+    header 
+   { 
+    padding: 40px; 
+    color:rgb(40, 8, 155)
+   } 
+   header img 
+   { width: 200px; 
+    height: 250px;
+     border-radius: 10px;
+    
+   }
+   div{
+     display: flex;
+      justify-content: center;
+   }
+    body {
+      color: rgb(63, 234, 253);
+      text-align: center;
+    
+       background-color: #000300;
+    }
+
+   
+    /* Profile Image */
+  header {
+      padding: 40px;
+     
+      position: relative;
+      display: flex;              /*  flexbox */
+      flex-direction: column;     /* stack vertically */
+      align-items: center;        /*  center horizontally */
+      justify-content: center;    /*  center vertically */
+      text-align: center;
+    }
+
+    
+
+/* Actual image */
+
+ #header {
+      width: 200px;
+      height: 250px;
+      border-radius: 25px;
+      padding: 5px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #header img {
+      width: 200px;
+      height: 250px;
+      border-radius: 35px;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Spinning gradient border */
+    #header::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border-radius: 25px;
+      background: conic-gradient(
+        #f8f7f8,
+        #333399,
+        #02fbc9,
+        #d6bff6,
+        #110293
+      );
+      animation: spinBorder 4s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes spinBorder {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-top: 15px;
+      color: #86c7fb;
+       font-family: bolder;
+      font-size: 40px;
+       animation: slideInTop  2s ease-out forwards;          /*animation*/
+
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+    
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      color: rgb(248, 250, 252);
+       font-family: bolder;
+      font-size: 25px;
+        animation: slideInBottom  2s ease-out forwards;          /*animation*/
+
+}
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+    
+
+    /* About Section */
+    section {
+      padding: 40px;
+      margin: 20px auto;
+      width: 80%;
+     
+      border-radius: 12px;
+      box-shadow: 10px 10px 10px rgba(70, 88, 226, 0.3);
+      place-items: center;
+     
+      backdrop-filter: blur(30px); 
+     /* background-image: url("https://marketplace.canva.com/EAFt0-MWpSU/2/0/900w/canva-soft-watercolour-no-copy-phone-wallpaper-in-purple-and-blue-gradient-style-O5sd-yFWWG4.jpg");
+      background-size: cover;*/
+      
+    }
+    .section1{
+       color: rgb(179, 203, 209);}
+       #about
+       {
+                    animation: slideInRight  4s ease-out forwards;          /*animation*/
+       }
+      
+
+
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+    
+
+    .section1 :hover {
+      transform: scale(1.3);
+      transition: 2s;
+    }
+
+    .section2 :hover {
+      transform: rotateY(360deg);
+      transition: 2s;
+     
+
+}
+
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid rgb(149, 101, 252);
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #f7f5f5;
+    }
+
+      #achievements
+      {
+        animation: slideInRight  5s ease-out forwards;          /*animation*/
+
+      }
+       
+    
+
+    @keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+    
+
+
+    /* Contact Info */
+    #contact {
+      margin-top: 20px;
+    }
+     
+    
+
+    #contact p {
+      font-size: 1.1rem;
+      margin: 8px 0;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      color: rgb(248, 149, 2);
+      
+        animation: slideInTop 9s ease-out forwards;          /*animation*/
+
+      
+    }
+    
+
+    #qualification
+    {
+       
+        animation: slideInLeft  6s ease-out forwards;          /*animation*/
+
+      }
+    
+
+    table {
+      text-align: center;
+      padding: 10px;
+      border: 8px;
+      border-radius: 5px; 
+      border-color: #0c0c0c;
+    }
+
+    th {
+      text-decoration: none;
+      font-size: 20px;
+      font-family: bold;
+      padding: 20px;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 20px;
+    }
+
+    li::marker {
+      color: rgba(170, 210, 251, 0.775);
+      font-size: 30px;
+    }
+
+    li span:first-child {
+      font-weight: bold;
+      color: #cac6c6;
+      flex: 1;
+    }
+
+    li span:last-child {
+      color:  rgb(3, 40, 249);
+      flex: 2;
+      text-align: right;
+      font-family: bold;
+      font-size: 20px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        clip-path: inset(100% 100% 100% 100%);
+      }
+      to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    section {
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+
+    @media (max-width: 500px) {
+      li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      li span:last-child {
+        text-align: left;
+        margin-top: 4px;
+      }
+    }
+
+    /* Skills */
+    #skills
+    {
+      
+        animation: slideInLeft  7s ease-out forwards;          /*animation*/
+
+      
+    }
+    #info
+    
+    {
+      animation: fadeIn  10s ease forwards;          /*animation*/
+    }
+     @keyframes fadeIn {
+      from { opacity: 0; }  /* invisible */
+      to   { opacity: 1; }  /* visible */
+    }
+
+    #skills {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      
+    }
+    .intro 
+    {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .answer
+    {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .skill_ {
+      border: 2px dashed white;
+      backdrop-filter: blur(180px);
+      color: rgb(119, 151, 244);
+      padding: 10px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    table, th, td {
+      border: 3px solid rgb(135, 181, 181);
+      border-radius: 10px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    th, td {
+      border-style: dashed;
+      border-color: #c3bbdd;
+    }
+
+    td {
+      color:  rgb(250, 251, 252);
+      font-size: 20px;
+      font-weight: bold;
+    }
+    th{
+       font-size: 25px;
+      font-weight: bold;
+      color:  rgb(4, 242, 246);
+    }
+     .download_btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background: #007BFF;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 5px 5px 10px rgb(12, 12, 12);
+      transition: background 0.3s;
+    }
+    
+   
+  </style>
+</head>
+<body>
+   
+  <!-- Header(Intro) -->
+  <header>
+
+    <div id="header">
+    <img src="C:\Users\Priyanka Das\OneDrive\Desktop\portpolio\pic.jpeg" alt="Profile Picture" >
+    </div>
+    <h1>Hello, I'm Priyanka Das 👩‍💻</h1>
+    <p>| Aspiring Web And Full Stack Developer | Passionate Learner | Creative Thinker & Finder |</p>
+  </header>
+
+  <!--  Section -->
+  <section class="section1" id="about">
+    <h2>About Me</h2>
+    <p>Hi! I am a beginner in web development, learning HTML, CSS, and JavaScript. 
+       I love creating simple yet creative projects like temperature converters, portfolios, 
+       and more. My goal is to become a professional full stack developer and create many interesting, unique things!</p>
+       <div> <a href="C:\Users\Priyanka Das\Downloads\PRIYANKA DAS_RESUME.pdf" download="PRIYANKA_CV.pdf" class="download_btn">Download CV</a></div>
+  </section>
+
+  <!-- Qualification -->
+  <section class="section2" id="qualification">
+    <h2>Qualification</h2>
+    <table>
+      <tr>
+        <th>SERIAL NUMBER</th>
+        <th>Qualification</th>
+        <th>UNIVERSITY / BOARD</th>
+        <th>STARTING YEAR</th>
+        <th>PASSING YEAR</th>
+        <th>PER %</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>MADHYAMIK</td>
+        <td>WBBSE</td>
+        <td>2020</td>
+        <td>2021</td>
+        <td>88.84</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>HS</td>
+        <td>WBCHSE</td>
+        <td>2021</td>
+        <td>2023</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>BCA</td>
+        <td>MAKAUT</td>
+        <td>2023</td>
+        <td>2027</td>
+        <td>Pursuing (3rd year)</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Achievements -->
+  <section class="section2" id="achievements">
+    <h2>Achievements</h2>
+    <table>
+      <tr>
+        <th>SERIAL NUMBER</th>
+        <th>Achievements</th>
+        <th>From Where</th>
+        <th>Number</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>INTERNSHIP</td>
+        <td>ORACLE, ARDENT, DELOITTE</td>
+        <td>6</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>RESEARCH PAPER</td>
+        <td>IEEE, ISO</td>
+        <td>2</td>
+        <td>2024-2025</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Personal Info -->
+  <section class="section1" id="info" >
+    <h2>Personal Information</h2>
+    <ul>
+      <li><span class="intro">Father's Name:</span> <span class="answer">Prabir Kumar Das</span></li>
+      <li><span class="intro">Mother's Name:</span> <span class="answer">Jaya Das</span></li>
+      <li><span class="intro">Date of Birth:</span> <span class="answer">2005-04-03</span></li>
+      <li><span class="intro">Language Known:</span> <span v>English, Hindi & Bengali</span></li>
+      <li><span class="intro">Gender:</span> <span class="answer">Female</span></li>
+      <li><span class="intro">Nationality:</span> <span class="answer">Indian</span></li>
+      <li><span class="intro">Marital Status:</span> <span class="answer">Unmarried</span></li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section1">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <span class="skill_">HTML</span>
+      <span class="skill_">CSS</span>
+      <span class="skill_">JavaScript</span>
+      <span class="skill_">Python</span>
+      <span class="skill_">SQL</span>
+      <span class="skill_">C</span>
+      <span class="skill_">DSA WITH C</span>
+      <span class="skill_">DIGITAL ELECTRONICS</span>
+      <span class="skill_">COMPUTER ARCHITECTURE</span>
+      <span class="skill_">IOT</span>
+      <span class="skill_">DBMS</span>
+      <span class="skill_">SOFTWARE ENGINEERING</span>
+      <span class="skill_">OS</span>
+      <span class="skill_">PHP WITH MYSQL</span>
+      <span class="skill_">CLOUD COMPUTING</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Priyanka's Portfolio. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
